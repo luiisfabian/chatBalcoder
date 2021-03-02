@@ -1,4 +1,5 @@
 
+import 'package:chat_balcoder/ui/home/contact/contact_list_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -41,7 +42,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ))],
           title: Row(
             children: [
-              Text(" SarApp"),
+              Center(child: Text(" SarApp")),
               
             ],
           ),
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           child: TabBarView(
 
             children: [
-              Container(color: Colors.red),
+              ContactListPage(),
               Container(color: Colors.blue,)
               
               //1RA PANTALLA
