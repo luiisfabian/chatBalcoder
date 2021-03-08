@@ -1,8 +1,8 @@
+import 'package:chat_balcoder/ui/chat/chat_form_page.dart';
+import 'package:chat_balcoder/ui/contact/contact_form_page.dart';
+import 'package:chat_balcoder/ui/contact/contact_list_page.dart';
 
-import 'package:chat_balcoder/ui/home/contact/contact_list_page.dart';
 import 'package:flutter/material.dart';
-
-
 
 class HomePage extends StatefulWidget {
   @override
@@ -34,26 +34,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ],
             indicatorColor: Colors.white,
           ),
-          actions: [Padding(
-                  padding: const EdgeInsets.only(left: 270.0),
-                  child: IconButton(
-                    icon: Icon(Icons.menu),
-                    onPressed: () {},
-                  ))],
+          actions: [
+            Padding(
+                padding: const EdgeInsets.only(left: 270.0),
+                child: IconButton(
+                  icon: Icon(Icons.menu),
+                  onPressed: () {},
+                ))
+          ],
           title: Row(
             children: [
               Center(child: Text(" SarApp")),
-              
             ],
           ),
         ),
         body: Center(
           child: TabBarView(
-
             children: [
               ContactListPage(),
-              Container(color: Colors.blue,)
-              
+              Container(
+                color: Colors.blue,
+              )
+
               //1RA PANTALLA
               // ContactListPage(),
 
@@ -66,13 +68,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                if (_tabController.index == 0) {
-                  // return ContactFormPage();
-              } else {
-                // return ChatFormPage();
-              }
-              })
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) {
+                  if (_tabController.index == 0) {
+                    return ContactFormPage();
+                  } else {
+                    return ChatFormPage();
+                  }
+                }),
               );
             },
             child: Icon(Icons.add_circle_outline),

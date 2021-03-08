@@ -1,6 +1,8 @@
-import 'package:chat_balcoder/ui/home/contact/contact_service.dart';
-import 'package:chat_balcoder/ui/home/contact/model/ContactModel.dart';
+
 import 'package:flutter/material.dart';
+
+import 'contact_service.dart';
+import 'model/ContactModel.dart';
 
 class ContactListPage extends StatefulWidget {
   ContactListPage({Key key}) : super(key: key);
