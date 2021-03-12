@@ -1,6 +1,7 @@
 import 'package:chat_balcoder/ui/chat/chat_form_page.dart';
 import 'package:chat_balcoder/ui/contact/contact_form_page.dart';
 import 'package:chat_balcoder/ui/contact/contact_list_page.dart';
+import 'package:chat_balcoder/ui/contact/model/ContactModel.dart';
 
 import 'package:flutter/material.dart';
 
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (_) {
                   if (_tabController.index == 0) {
-                    return ContactFormPage();
+                    return ContactFormPage(contactModel: new ContactModel(),);
                   } else {
                     return ChatFormPage();
                   }
